@@ -79,7 +79,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,8 +125,9 @@ source /opt/homebrew/opt/spaceship/spaceship.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# dotfiles
+alias dotfiles='/usr/bin/git --git-dir=/Users/cagdascan/.dotfiles/ --work-tree=/Users/cagdascan'
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
-# dotfiles
-alias dotfiles='/usr/bin/git --git-dir=/Users/cagdascan/.dotfiles/ --work-tree=/Users/cagdascan'
